@@ -1,0 +1,34 @@
+.container-crud{
+background: #fafafa;
+}
+.container-title{
+    margin-left: 10%;
+    margin-top: 50px;
+    color: #282828;
+}
+.container-info{
+    margin-top: 30px;
+    margin-left: 8%;
+    margin-right: 8%;
+    height: 500px;
+    width: 84%;
+    border: 1px solid #33333359;
+    border-collapse: collapse;
+}
+.container-info-menu{
+    width: 100%;
+    height: 50px;
+    background:#ebebeb;
+    display: flex;
+    justify-content: space-between;
+    align-items:  center;
+    position: relative;
+}
+.button-add{
+    margin-left: 10px;
+  
+}
+.button-search{
+    margin-right: 10px; 
+    
+}

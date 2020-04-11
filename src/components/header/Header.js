@@ -8,8 +8,6 @@ const Header = () => {
             
               <span className="itens">Cadastro</span>
               <span className="itens">Relatório</span>
-
-              <span className="profile">Relatório</span>
             </header>
     )
 }
