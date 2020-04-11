@@ -41,6 +41,5 @@ a:hover{
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
-     background-color:none; 
+     background-color:#46a0f5; 
 }
