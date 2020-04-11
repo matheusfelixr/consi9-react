@@ -6,8 +6,19 @@ import Button from 'react-bootstrap/Button';
 
 export default class ContainerCrud extends Component {
 
+  constructor(props){
+    super(props);
+
+    this.state={
+        showSearch: false,
+        showCreate : false,
+        classContainerInfo: 'container-info'
+    }
+
+}
+
   render() {
-    let className = 'container-info';
+    
     return (
       
             <div className="container-crud">
@@ -15,7 +26,7 @@ export default class ContainerCrud extends Component {
               <div className="container-title">
                 <h1>Cadastro de Produto </h1>
               </div>
-              <div className={className}>
+              <div className={this.state.classContainerInfo}>
                 <div className="container-info-menu ">
                   <Button variant="success" size="lg" className="button-add"> Adicionar</Button>
                   <Button size="lg" className="button-search"> Pesquisar</Button>

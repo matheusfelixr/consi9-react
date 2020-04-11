@@ -28,7 +28,7 @@ a:hover{
 .dropdown-menu {
     font-size: 16px;
     color: #212529;
-    background-color: #fafafa;
+    background-color: #fff;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     background-color:none; 
@@ -38,4 +38,9 @@ a:hover{
     color: #fff;
     text-decoration: none;
     background-color: #ebebeb;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+     background-color:none; 
 }
