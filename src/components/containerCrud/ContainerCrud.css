@@ -3,17 +3,20 @@ background: #fafafa;
 }
 .container-title{
     margin-left: 10%;
-    margin-top: 50px;
+    margin-top: 20px;
     color: #282828;
 }
 .container-info{
-    margin-top: 30px;
+    margin-top: 15px;
     margin-left: 8%;
     margin-right: 8%;
     height: 500px;
     width: 84%;
     border: 1px solid #33333359;
     border-collapse: collapse;
+    margin-bottom: 10px;
+    overflow-x: auto;
+    overflow-y: auto;
 }
 .container-info-menu{
     width: 100%;
@@ -30,5 +33,4 @@ background: #fafafa;
 }
 .button-search{
     margin-right: 10px; 
-    
 }

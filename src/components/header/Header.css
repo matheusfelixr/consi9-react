@@ -1,6 +1,6 @@
 header#main-header{
     width: 100%;
-    height: 60px;
+    height: 50px;
     background:#46a0f5;
     color: #fff;
     display: flex;
@@ -16,12 +16,26 @@ header#main-header{
 .itens{
     padding-right: 25px;
     padding-left: 25px;
-    font-size: 20px;
+    font-size: 16px;
 }
-.itens:hover  {
-    color: #1f1d1d;
-    cursor: pointer;
-  }
-.profile{
-    font-size: 20px;
+a{ 
+  color: #fff;
+}
+a:hover{ 
+    color: #1f1d1d !important;
+}
+
+.dropdown-menu {
+    font-size: 16px;
+    color: #212529;
+    background-color: #fafafa;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color:none; 
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ebebeb;
 }
