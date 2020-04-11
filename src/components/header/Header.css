@@ -1,0 +1,27 @@
+header#main-header{
+    width: 100%;
+    height: 60px;
+    background:#46a0f5;
+    color: #fff;
+    display: flex;
+    justify-content: right;
+    align-items:  center;
+}
+.logo{
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 16px;
+    padding-right: 50px;
+}
+.itens{
+    padding-right: 25px;
+    padding-left: 25px;
+    font-size: 20px;
+}
+.itens:hover  {
+    color: #1f1d1d;
+    cursor: pointer;
+  }
+.profile{
+    font-size: 20px;
+}

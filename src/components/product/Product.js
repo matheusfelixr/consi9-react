@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Product.css';
 import Button from 'react-bootstrap/Button';
+import Header from '../header/Header';
+
 
 export default class Product extends Component {
     
@@ -173,6 +175,7 @@ table = () =>{
 
         return (
             <div className="product">
+                  <Header/>
                 <h1>Cadastro de produto</h1>
                 {!showSearch && <Button variant="secondary" onClick={() =>  this.setState({showSearch : true, showCreate : false, showUpdate : false, domain: {id:"",name:"",costValue:"",saleValue: "",registrationDate: "",updateDate: "",cancellation: "",cancellationDate: "" }}) } >Pesquisar</Button>}
                 {!showCreate && <Button variant="success" onClick={ () => this.setState({showCreate : true, showSearch : false})} >Adicionar Novo</Button>}
