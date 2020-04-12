@@ -1,29 +1,24 @@
-.container-title{
-    margin-left: 10%;
-    margin-top: 20px;
-    color: #282828;
+
+.container-body{
+  width: 100%;
+  padding: 30px;
 }
-.container-info-open{
-    margin-top: 15px;
-    margin-left: 8%;
-    margin-right: 8%;
+
+.container-title{
+    padding: 0 20px 10px;
+    color: #282828;   
+}
+.container-info-none{
     height: 52px;
-    width: 84%;
+    width: 100%;
     border: 1px solid #33333359;
     border-collapse: collapse;
-    margin-bottom: 10px;
 }
 .container-info{
-    margin-top: 15px;
-    margin-left: 8%;
-    margin-right: 8%;
     height: 500px;
-    width: 1100px;
+    width: 100%;
     border: 1px solid #33333359;
     border-collapse: collapse;
-    margin-bottom: 10px;
-    overflow-x: auto;
-    overflow-y: auto;
 }
 .container-info-menu{
     width: 100%;
@@ -32,11 +27,9 @@
     display: flex;
     justify-content: space-between;
     align-items:  center;
-    position: relative;
 }
 .button-add{
     margin-left: 10px;
-  
 }
 .button-search{
     margin-right: 10px; 
