@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ContainerCrud from '../../components/container-crud/ContainerCrud';
+import api from '../../services/Api';
+import Button from 'react-bootstrap/Button';
 
 export default class ProductCrud extends Component {
     constructor(props){
@@ -19,14 +21,23 @@ export default class ProductCrud extends Component {
         
               </>
           )
-        }  
+        }
+    }
+
+    findAllProduct = async () =>{
+        try {
+            const response = await api.get(`/product/list-all`);
+            console.log(response);
+          } catch (error) {
+            console.error(error);
+          }
     }
   
     render() {
     return (
             <div className="product">
                 <ContainerCrud tableHeaders = {this.state.tableHeaders}/>
-
+                <Button variant="success" onClick={this.findAllProduct}>Salvar</Button>
             </div>
         )
   }
