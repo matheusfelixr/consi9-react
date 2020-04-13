@@ -1,7 +1,15 @@
-
+.container-body-center{
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+  }
+  
 .container-body{
-  width: 100%;
-  padding: 30px;
+  width: 1200px;
+  
+  padding: 20px 10px 10px 10px;
+  overflow-x: auto;
+  overflow-y: auto;
 }
 
 .container-title{
@@ -13,12 +21,13 @@
     width: 100%;
     border: 1px solid #33333359;
     border-collapse: collapse;
+    border-radius: 6px;
 }
 .container-info{
-    height: 500px;
     width: 100%;
     border: 1px solid #33333359;
     border-collapse: collapse;
+    border-radius: 6px;
 }
 .container-info-menu{
     width: 100%;
@@ -27,10 +36,28 @@
     display: flex;
     justify-content: space-between;
     align-items:  center;
+    border-radius: 6px;
 }
 .button-add{
     margin-left: 10px;
 }
 .button-search{
     margin-right: 10px; 
+}
+.container-form{
+    padding: 20px 35px 35px 35px;
+}
+.form-label{
+    font-size: 14px;
+}
+.form-control {
+    font-size: 14px;
+}
+.container-button-save{
+    display: flex;
+    justify-content: flex-end;
+    align-items:  center;
+}
+.form-row>.col, .form-row>[class*=col-] {
+    padding-left: 10px;
 }

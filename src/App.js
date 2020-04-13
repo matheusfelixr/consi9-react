@@ -2,12 +2,12 @@ import React from 'react';
 import './App.css';
 import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ProductCrud from './pages/product-crud/ProductCrud';
+import ContainerCrud from './components/container-crud/ContainerCrud';
 
 function App() {
   return (
     <div className="App">
-      <ProductCrud></ProductCrud>
+      <ContainerCrud></ContainerCrud>
     </div>
   );
 }
