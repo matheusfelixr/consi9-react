@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header from '../header/Header';
-import './ContainerCrud.css';
+import Header from '../../components/header/Header';
+import './Product.css';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import api from '../../services/Api';
@@ -8,8 +8,8 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import InputGroup from 'react-bootstrap/InputGroup';
 
-export default class ContainerCrud extends Component {
-
+export default class Product extends Component {
+  
   constructor(props){
     super(props);
 
@@ -17,11 +17,7 @@ export default class ContainerCrud extends Component {
         showSearch: false,
         showCreate : false,
         classContainerInfo: 'container-info-none',
-        tableHeaders: props.tableHeaders,
-
         responseProduct: [],
-
-
         domain : {  
           id:"",
           description:"",
@@ -34,10 +30,8 @@ export default class ContainerCrud extends Component {
           cancellationDate: ""
       },
     }
-
 }
 
-// intens da tabela
 table= () =>{
   return(
     <Table striped bordered hover size="sm">
@@ -87,12 +81,6 @@ findAllProduct = async () =>{
     }
     
 }
-
-
-
-
-
-//inserir usuario
 createProduct = () =>{
   api.post('/product/new', {  
     id:null,
