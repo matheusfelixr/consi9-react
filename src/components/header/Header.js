@@ -7,6 +7,7 @@ const Header = () => {
     const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
     return(
             <header id="main-header">
+            <div>
               <span className="logo">Cons i9</span>
 
               <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
@@ -21,6 +22,7 @@ const Header = () => {
                   <NavDropdown.Item eventKey="4.2">Relatório de Produtos</NavDropdown.Item>
                 </NavDropdown>
               </Nav>
+              </div>
             </header>
     )
 }

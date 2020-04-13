@@ -1,12 +1,17 @@
+
 import React, { Component } from 'react';
-import Header from '../../components/header/Header';
+
 import './Product.css';
+
+import Header from '../../components/header/Header';
+import LoaderBasic from '../../components/loader/Loader';
+
+import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
-import api from '../../services/Api';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
-import InputGroup from 'react-bootstrap/InputGroup';
+import api from '../../components/config/Api';
 
 export default class Product extends Component {
   
@@ -16,6 +21,7 @@ export default class Product extends Component {
     this.state={
         showSearch: false,
         showCreate : false,
+        showLoader : false,
         classContainerInfo: 'container-info-none',
         responseProduct: [],
         domain : {  
@@ -30,6 +36,19 @@ export default class Product extends Component {
           cancellationDate: ""
       },
     }
+}
+
+openLoader(){
+  setTimeout(() => {
+    this.setState({showLoader : true});
+  }, 1);
+}
+
+closeLoader(){
+  setTimeout(() => {
+    this.setState({showLoader : false});
+  }, 1);
+
 }
 
 table= () =>{
@@ -94,14 +113,11 @@ createProduct = () =>{
     cancellationDate:null 
 })
   .then(function (response) {
-    console.log(response);
+    console.log(response)
   })
   .catch(function (error) {
     console.log(error);
   });
-  this.setState({showSearch : true, showCreate : false,  domain: {id:"",description:"",costValue:"",saleValue: "",registrationDate: "",updateDate: "",cancellation: "",cancellationDate: "" }});
-  this.findAllProduct();
-
 }
 
 onChangeHandler = (e) =>{
@@ -154,7 +170,7 @@ create= () =>{
         </Form.Row>
       </Form>
       <div className="container-button-save">
-          {this.state.showCreate && <Button size="lg" variant="success" type = "submit"  onClick={this.createProduct}>Salvar</Button>}
+          {this.state.showCreate && <Button size="lg" variant="success" type = "submit"  onClick={this.createProduct} >Salvar</Button>}
           {this.state.showUpdate && <Button size="lg" variant="success"   onClick={this.updateApi}>Salvar update</Button>}
           {this.state.showSearch && <Button size="lg" variant="secondary" onClick={this.findProduct}>Buscar</Button>}
       </div>
@@ -164,10 +180,11 @@ create= () =>{
 
 
   render() { 
-    const {showCreate, showSearch} = this.state;
+    const {showCreate, showSearch, showLoader} = this.state;
     return (
             <div className="container-crud">
               <Header/>
+              {showLoader && <LoaderBasic/>}
               <div className="container-body-center">
                 <div className="container-body">
                   <div className="container-title">
@@ -180,7 +197,7 @@ create= () =>{
                     </div>
                     
                     {showCreate && this.create()}
-                    {showSearch && this.table( )}
+                    {showSearch && this.table()}
                   </div>
               </div>
               </div>
